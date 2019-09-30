@@ -63,6 +63,8 @@ const App = () => (
 
 ### `data` Object array
 
+check [sample data](stories/data.json)
+
 |Name|Type|Required|Description|Default|
 |:--:|:--:|:-----:|:----------|:------|
 |**0-1**|`Number`|`Required`| Frequency of 0-1 m/sec ||

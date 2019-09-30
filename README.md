@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/eunchurn/react-windrose-chart.svg?branch=master)](https://travis-ci.org/eunchurn/react-windrose-chart)
+
 # Windrose Chart Component
 
 [**Storybook**](https://eunchurn.github.io/react-windrose-chart/)

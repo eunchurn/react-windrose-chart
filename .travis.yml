@@ -8,17 +8,17 @@ node_js:
 cache:
   yarn: true
 
-before_install:
-  - yarn global add lerna
+# before_install:
+#   - yarn global add lerna
 
 install:
   - yarn bootstrap
 
 script:
-  - yarn lint
-  - yarn flow-typed-install
-  - yarn flow
-  - yarn test -- --coverage
+  # - yarn lint
+  # - yarn flow-typed-install
+  # - yarn flow
+  # - yarn test -- --coverage
   - yarn build
 
 before_deploy:

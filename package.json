@@ -1,6 +1,6 @@
 {
   "name": "react-windrose-chart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wind Rose Chart React Component for npm Publication using Rollup",
   "main": "./dist/index.js",
   "files": [

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var React=require("react"),index=function(e){return console.log("You are calling the default-export package!"),React.createElement("div",e)};exports.default=index;

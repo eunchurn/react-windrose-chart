@@ -131,6 +131,12 @@ const directionCharacter = classifyDir(270);
 - `yarn start`: build the wind rose chart component and start storybook with this.
 - `yarn test`: testing javasciript code with [jest](https://jestjs.io/) `BABEL_ENV=test`
 
+## Real-Time
+
+Real-Time chart data from Anemometer
+
+![realtime-chart](doc/images/realtime.gif)
+
 ## License
 
 MIT

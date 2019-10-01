@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/eunchurn/react-windrose-chart.svg?branch=master)](https://travis-ci.org/eunchurn/react-windrose-chart)
+[![Build Status](https://travis-ci.org/eunchurn/react-windrose-chart.svg?branch=master)](https://travis-ci.org/eunchurn/react-windrose-chart) [![Greenkeeper badge](https://badges.greenkeeper.io/eunchurn/react-windrose-chart.svg)](https://greenkeeper.io/)
 
 # Windrose Chart Component
 

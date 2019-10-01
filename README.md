@@ -62,8 +62,8 @@ const App = () => (
 |:--:|:--:|:-----:|:----------|:------|
 |**data**|`Array`|`Required`|Wind Rose Chart data||
 |**columns**|`Array`|`Required`|Wind Rose Chart header string array||
-|**width**|`Number`|default: `500`|Wind Rose Chart header string array||
-|**height**|`Number`|default: `500`|Wind Rose Chart header string array||
+|**width**|`Number`|default: `500`| container width||
+|**height**|`Number`|default: `500`| container height||
 
 ### `data` Object array
 

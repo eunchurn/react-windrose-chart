@@ -62,6 +62,8 @@ const App = () => (
 |:--:|:--:|:-----:|:----------|:------|
 |**data**|`Array`|`Required`|Wind Rose Chart data||
 |**columns**|`Array`|`Required`|Wind Rose Chart header string array||
+|**width**|`Number`|default: `500`|Wind Rose Chart header string array||
+|**height**|`Number`|default: `500`|Wind Rose Chart header string array||
 
 ### `data` Object array
 
@@ -82,7 +84,7 @@ check [sample data](stories/data.json)
 
 ### Data utils
 
-- Wind direction(degree) and wind speed data can convert to windrose chart data function: `{timestamp, direction, speed}` to `{data, columns}`
+- Wind Rose data can be converted by Wind direction(degree) and wind speed data: `{timestamp, direction, speed}` to `{data, columns}`
 
 ```javascript
 import { caculateWindRose } from "react-windrose-chart";
@@ -97,7 +99,7 @@ const windRoseData = calculateWindRose(data);
 // Return {data, columns}
 ```
 
-- Classifying direction function only
+- Classifying direction function only is as:
 
 ```javascript
 import { classifyDir } from "react-windrose-chart";

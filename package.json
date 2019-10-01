@@ -1,10 +1,11 @@
 {
   "name": "react-windrose-chart",
-  "version": "0.1.1-rc.0",
+  "version": "0.1.5",
   "description": "Wind Rose Chart React Component for npm Publication using Rollup",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "files": [
-    "./dist"
+    "dist",
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -129,9 +130,7 @@
   },
   "dependencies": {
     "d3": "^5.12.0",
-    "react-is": "^16.10.1"
-  },
-  "peerDependencies": {
+    "react-is": "^16.10.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "styled-components": "^4.4.0"

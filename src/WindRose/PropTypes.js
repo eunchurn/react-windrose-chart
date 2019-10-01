@@ -16,9 +16,13 @@ export const ChartPropTypes = {
     }).isRequired,
   ).isRequired,
   columns: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 
 export const ChartDefaultProps = {
+  width: 500,
+  height: 500,
   data: [
     {
       angle: 'N',

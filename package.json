@@ -1,7 +1,7 @@
 {
   "name": "react-windrose-chart",
-  "version": "0.1.5",
-  "description": "Wind Rose Chart React Component for npm Publication using Rollup",
+  "version": "0.1.6-alpha",
+  "description": "React Wind Rose Chart Component (D3js implemented SVG rendering)",
   "main": "dist/index.js",
   "files": [
     "dist",

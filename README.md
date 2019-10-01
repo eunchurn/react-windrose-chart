@@ -8,7 +8,7 @@
 
 ![react-windrose-chart](doc/images/react-windrose-chart.png)
 
-- [D3js](https://d3js.org/) (JavaScript library for manipulating documents based on data) implemeted SVG Rendering
+- [D3js](https://d3js.org/) (Javascript library for manipulating documents based on data) implemented SVG rendering
 - Inspired from [ssmaroju](https://bl.ocks.org/ssmaroju)'s [Wind Rose Plot](https://bl.ocks.org/ssmaroju/96af159c1872c2928a972c441bccaf50)
 
 ## Installation
@@ -62,8 +62,8 @@ const App = () => (
 |:--:|:--:|:-----:|:----------|:------|
 |**data**|`Array`|`Required`|Wind Rose Chart data||
 |**columns**|`Array`|`Required`|Wind Rose Chart header string array||
-|**width**|`Number`|default: `500`| container width||
-|**height**|`Number`|default: `500`| container height||
+|**width**|`Number`|| container width, default value: `500`||
+|**height**|`Number`|| container height, default value: `500`||
 
 ### `data` Object array
 
@@ -90,7 +90,6 @@ check [sample data](stories/data.json)
 import { caculateWindRose } from "react-windrose-chart";
 
 const data = {
-  timestamp: 1523523423,
   direction: [270, 256, 240,...],
   speed: [ 1.02, 0.85, 0.98,...]
 }

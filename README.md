@@ -1,7 +1,6 @@
-[![Build Status](https://travis-ci.org/eunchurn/react-windrose-chart.svg?branch=master)](https://travis-ci.org/eunchurn/react-windrose-chart) [![Greenkeeper badge](https://badges.greenkeeper.io/eunchurn/react-windrose-chart.svg)](https://greenkeeper.io/) ![npm](https://img.shields.io/npm/dw/react-windrose-chart) [![codecov](https://codecov.io/gh/eunchurn/react-windrose-chart/branch/master/graph/badge.svg)](https://codecov.io/gh/eunchurn/react-windrose-chart) ![NPM](https://img.shields.io/npm/l/react-windrose-chart)
-
-
 # Windrose Chart Component
+
+[![Build Status](https://travis-ci.org/eunchurn/react-windrose-chart.svg?branch=master)](https://travis-ci.org/eunchurn/react-windrose-chart) [![Greenkeeper badge](https://badges.greenkeeper.io/eunchurn/react-windrose-chart.svg)](https://greenkeeper.io/) ![npm](https://img.shields.io/npm/dw/react-windrose-chart) [![codecov](https://codecov.io/gh/eunchurn/react-windrose-chart/branch/master/graph/badge.svg)](https://codecov.io/gh/eunchurn/react-windrose-chart) ![NPM](https://img.shields.io/npm/l/react-windrose-chart) [![npm version](https://badge.fury.io/js/react-windrose-chart.svg)](https://badge.fury.io/js/react-windrose-chart)
 
 [**Storybook**](https://eunchurn.github.io/react-windrose-chart/)
 

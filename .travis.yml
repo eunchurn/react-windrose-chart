@@ -15,22 +15,23 @@ install:
   - yarn bootstrap
 
 script:
-  # - yarn lint
-  # - yarn flow-typed-install
-  # - yarn flow
-  # - yarn test -- --coverage
+  - yarn lint
+  - yarn flow-typed-install
+  - yarn flow
+  - yarn test -- --coverage
   - yarn build
 
-# before_deploy:
-#   - yarn build-storybook
+before_deploy:
+  - yarn build
+  - yarn build-storybook
 
-# deploy:
-#   provider: pages
-#   skip_cleanup: true
-#   github_token: $GITHUB_TOKEN
-#   local_dir: storybook-static
-#   on:
-#     branch: master
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: storybook-static
+  on:
+    branch: master
 
 after_script:
   - yarn codecov

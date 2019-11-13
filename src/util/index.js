@@ -224,7 +224,7 @@ export const calculateWindRose = data => {
   data.direction.map((direction, index) => {
     const speed = data.speed[index];
     const dir = classifyDir(direction);
-    countPush(count, dir, speed);
+    return countPush(count, dir, speed);
   });
   const ret = Object.keys(count).map(key => {
     let total = 0;
@@ -234,9 +234,12 @@ export const calculateWindRose = data => {
       return { [subkey]: E };
     });
     const obj = {};
-    elements.map(
-      val => (obj[Object.keys(val)[0]] = Object.values(val)[0]),
-    );
+    elements.map(val => {
+      const [elKey] = Object.keys(val);
+      const [elVal] = Object.values(val);
+      obj[elKey] = elVal;
+      return obj;
+    });
     return {
       angle: key,
       ...obj,

@@ -111,10 +111,10 @@ class Chart extends React.Component {
         );
       label
         .append("text")
+        // eslint-disable-next-line no-confusing-arrow
         .attr("transform", d =>
           (x(d.angle) + x.bandwidth() / 2 + Math.PI / 2) %
-            (2 * Math.PI) <
-          Math.PI
+          (2 * Math.PI < Math.PI)
             ? "rotate(90)translate(0,16)"
             : "rotate(-90)translate(0,-9)",
         )

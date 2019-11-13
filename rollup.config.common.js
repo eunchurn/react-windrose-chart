@@ -51,9 +51,9 @@ export const configs = Object.entries(
       INCLUDES.some(pattern =>
         minimatch(pathname, `${PACKAGES_RESOLVE}/${pattern}`),
       ) &&
-        !EXCLUDES.some(pattern =>
-          minimatch(pathname, `${PACKAGES_RESOLVE}/${pattern}`),
-        )
+      !EXCLUDES.some(pattern =>
+        minimatch(pathname, `${PACKAGES_RESOLVE}/${pattern}`),
+      )
     ) {
       return {
         ...collection,

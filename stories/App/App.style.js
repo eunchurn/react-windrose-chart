@@ -1,4 +1,4 @@
-import { css, keyframes } from "styled-components";
+import { css, keyframes, styled } from "styled-components";
 
 const appLogoSpin = keyframes`
   from { transform: rotate(0deg); }
@@ -23,4 +23,16 @@ export const h1 = css`
 
 export const app = css`
   text-align: center;
+`;
+
+export const Header = styled.header`
+  ${header}
+`;
+
+export const Title = styled.h1`
+  ${h1}
+`;
+
+export const App = styled.div`
+  ${app}
 `;

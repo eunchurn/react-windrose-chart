@@ -35,3 +35,6 @@ deploy:
 
 after_script:
   - yarn codecov
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

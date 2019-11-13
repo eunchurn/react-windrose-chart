@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/eunchurn/react-windrose-chart"
+    "url": "git://github.com/eunchurn/react-windrose-chart"
   },
   "author": {
     "name": "Eunchurn Park",
@@ -22,8 +22,7 @@
   },
   "homepage": "https://github.com/eunchurn/react-windrose-chart#readme",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "keywords": [
     "windrose",

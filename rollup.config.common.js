@@ -1,21 +1,21 @@
-import fs from 'fs';
-import path from 'path';
-import minimatch from 'minimatch';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import babel from 'rollup-plugin-babel';
+import fs from "fs";
+import path from "path";
+import minimatch from "minimatch";
+import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
+import babel from "rollup-plugin-babel";
 
 const ROOT_RESOLVE = path.resolve();
 
-const PACKAGES_RESOLVE = path.resolve('packages');
+const PACKAGES_RESOLVE = path.resolve("packages");
 
-const ALL_PACKAGES = '*';
+const ALL_PACKAGES = "*";
 
-const EXCLUDES = ['react-cache'];
+const EXCLUDES = ["react-cache"];
 let INCLUDES = [];
 if (process.env.PACKAGES) {
   INCLUDES = process.env.PACKAGES.split(/\s*,\s*/).filter(pattern => {
-    if (pattern.startsWith('!')) {
+    if (pattern.startsWith("!")) {
       EXCLUDES.push(pattern.substring(1));
       return false;
     }
@@ -27,22 +27,17 @@ if (process.env.PACKAGES) {
 }
 
 const config = {
-  input: path.resolve(ROOT_RESOLVE, 'src', 'index.js'),
+  input: path.resolve(ROOT_RESOLVE, "src", "index.js"),
   plugins: [
     resolve(),
     commonjs({
-      include: 'node_modules/**',
+      include: "node_modules/**",
     }),
     babel({
-      exclude: 'node_modules/**',
+      exclude: "node_modules/**",
     }),
   ],
-  external: [
-    'react',
-    'react-dom',
-    'react-is',
-    'styled-components',
-  ],
+  external: ["react", "react-dom", "react-is", "styled-components"],
 };
 
 export const configs = Object.entries(
@@ -51,14 +46,25 @@ export const configs = Object.entries(
     : []
   ).reduce((collection, name) => {
     const pathname = path.resolve(PACKAGES_RESOLVE, name);
-    if (fs.statSync(pathname).isDirectory()
-      && (INCLUDES.some(pattern => minimatch(pathname, `${PACKAGES_RESOLVE}/${pattern}`))
-      && !EXCLUDES.some(pattern => minimatch(pathname, `${PACKAGES_RESOLVE}/${pattern}`)))) {
+    if (
+      fs.statSync(pathname).isDirectory() &&
+      INCLUDES.some(pattern =>
+        minimatch(pathname, `${PACKAGES_RESOLVE}/${pattern}`),
+      ) &&
+        !EXCLUDES.some(pattern =>
+          minimatch(pathname, `${PACKAGES_RESOLVE}/${pattern}`),
+        )
+    ) {
       return {
         ...collection,
         [pathname]: {
           ...config,
-          input: path.resolve(PACKAGES_RESOLVE, name, 'src', 'index.js'),
+          input: path.resolve(
+            PACKAGES_RESOLVE,
+            name,
+            "src",
+            "index.js",
+          ),
         },
       };
     }
@@ -66,8 +72,10 @@ export const configs = Object.entries(
   }, {}),
 );
 
-if ((INCLUDES.length === 0 || INCLUDES.includes(ALL_PACKAGES))
-    && fs.statSync(config.input).isFile()) {
+if (
+  (INCLUDES.length === 0 || INCLUDES.includes(ALL_PACKAGES)) &&
+  fs.statSync(config.input).isFile()
+) {
   configs.push([ROOT_RESOLVE, config]);
 }
 

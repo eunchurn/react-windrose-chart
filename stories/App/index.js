@@ -1,3 +1,3 @@
-import './index.css';
+import "./index.css";
 
-export { default } from './App.component';
+export { default } from "./App.component";

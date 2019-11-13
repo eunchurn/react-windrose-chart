@@ -6,7 +6,7 @@
 
 ## Features
 
-![react-windrose-chart](doc/images/react-windrose-chart.png)
+![react-windrose-chart](./doc/images/react-windrose-chart.png)
 
 - [D3js](https://d3js.org/) (Javascript library for manipulating documents based on data) implemented SVG rendering
 - Inspired from [ssmaroju](https://bl.ocks.org/ssmaroju)'s [Wind Rose Plot](https://bl.ocks.org/ssmaroju/96af159c1872c2928a972c441bccaf50)

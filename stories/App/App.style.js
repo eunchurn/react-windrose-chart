@@ -1,4 +1,4 @@
-import { css, keyframes } from 'styled-components';
+import { css, keyframes } from "styled-components";
 
 const appLogoSpin = keyframes`
   from { transform: rotate(0deg); }
@@ -7,13 +7,13 @@ const appLogoSpin = keyframes`
 
 export const logo = css`
   animation: ${appLogoSpin} infinite 20s linear;
-  height: 80px;
+  height: 40px;
 `;
 
 export const header = css`
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 40px;
+  padding: 10px;
   color: white;
 `;
 

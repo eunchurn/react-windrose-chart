@@ -1,1 +1,1 @@
-import './default-export';
+import "./default-export";

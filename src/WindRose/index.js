@@ -1,1 +1,1 @@
-export { default } from './WindRoseChart.component';
+export { default } from "./WindRoseChart.component";

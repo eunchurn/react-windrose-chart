@@ -1,11 +1,11 @@
 // @flow
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import * as styles from './App.style';
+import * as styles from "./App.style";
 
 type Props = {
-  children: any
+  children: any,
 };
 
 const Header = styled.header`
@@ -23,9 +23,7 @@ const App = styled.div`
 export default ({ children }: Props) => (
   <App>
     <Header>
-      <Title>
-        {'Wind Rose Chart'}
-      </Title>
+      <Title>{"Wind Rose Chart"}</Title>
     </Header>
     {children}
   </App>

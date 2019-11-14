@@ -1,4 +1,4 @@
-import { css, keyframes, styled } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const appLogoSpin = keyframes`
   from { transform: rotate(0deg); }

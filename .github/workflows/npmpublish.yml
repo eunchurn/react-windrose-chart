@@ -33,13 +33,20 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: "Setup actions"
+        uses: actions/checkout@v1
+      - name: "npm/registry setup"
+        uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@eunchurn'
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: npm ci
-      - run: npm publish
+      - name: "Publish package"
+        run: |
+          echo @eunchurn:registry=https://npm.pkg.github.com/ >> .npmrc
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

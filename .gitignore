@@ -69,7 +69,7 @@ flow-typed/npm
 storybook-static
 
 # only support Yarn
-package-lock.json
+# package-lock.json
 
 # Mac files
 .DS_Store
@@ -78,4 +78,4 @@ package-lock.json
 .cache
 
 # except security problem
-yarn.lock
+# yarn.lock

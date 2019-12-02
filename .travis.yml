@@ -15,14 +15,14 @@ install:
   - npm ci
 
 script:
-  - npm run lint
-  - npm run flow-typed-install
-  - npm run flow
-  - npm run test -- --coverage
+  - yarn lint
+  - yarn flow-typed-install
+  - yarn flow
+  - yarn test -- --coverage
 
 before_deploy:
-  - npm run build
-  - npm run build-storybook
+  - yarn build
+  - yarn build-storybook
 
 deploy:
   provider: pages

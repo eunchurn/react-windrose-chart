@@ -1,6 +1,6 @@
 {
   "name": "react-windrose-chart",
-  "version": "0.1.8-4",
+  "version": "0.1.8-5",
   "description": "React Wind Rose Chart Component (D3js implemented SVG rendering)",
   "main": "dist/index.js",
   "files": [
@@ -21,9 +21,6 @@
     "url": "https://github.com/eunchurn/react-windrose-chart/issues"
   },
   "homepage": "https://github.com/eunchurn/react-windrose-chart#readme",
-  "publishConfig": {
-    "access": "public"
-  },
   "keywords": [
     "windrose",
     "react",

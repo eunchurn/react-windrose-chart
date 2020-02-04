@@ -135,6 +135,6 @@
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-is": "^16.10.1",
-    "styled-components": "^4.4.0"
+    "styled-components": "^5.0.1"
   }
 }

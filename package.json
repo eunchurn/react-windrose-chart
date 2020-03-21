@@ -107,7 +107,7 @@
     "jest-styled-components": "^7.0.0",
     "lerna": "^3.16.4",
     "minimatch": "^3.0.4",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.0",
     "prop-types": "^15.7.2",
     "raf": "^3.4.1",
     "react": "^16.10.1",

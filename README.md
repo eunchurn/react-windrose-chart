@@ -37,16 +37,16 @@ const data = {
       /* ... */
       "6-7": 0.2,
       "7+": 0.1,
-      total: 4.9
-    } /* ... */
+      total: 4.9,
+    } /* ... */,
   ],
   columns: [
     "angle",
     "0-1",
     /* ... */
     "6-7",
-    "7+"
-  ]
+    "7+",
+  ],
 };
 
 const App = () => (
@@ -58,29 +58,29 @@ const App = () => (
 
 ## Props
 
-|Name|Type|Required|Description|Default|
-|:--:|:--:|:-----:|:----------|:------|
-|**data**|`Array`|`Required`|Wind Rose Chart data||
-|**columns**|`Array`|`Required`|Wind Rose Chart header string array||
-|**width**|`Number`|| container width, default value: `500`||
-|**height**|`Number`|| container height, default value: `500`||
+|    Name     |   Type   |  Required  | Description                            | Default |
+| :---------: | :------: | :--------: | :------------------------------------- | :------ |
+|  **data**   | `Array`  | `Required` | Wind Rose Chart data                   |         |
+| **columns** | `Array`  | `Required` | Wind Rose Chart header string array    |         |
+|  **width**  | `Number` |            | container width, default value: `500`  |         |
+| **height**  | `Number` |            | container height, default value: `500` |         |
 
 ### `data` Object array
 
 check [sample data](stories/data.json)
 
-|Name|Type|Required|Description|Default|
-|:--:|:--:|:-----:|:----------|:------|
-|**0-1**|`Number`|`Required`| Frequency of 0-1 m/sec ||
-|**1-2**|`Number`|`Required`| Frequency of 1-2 m/sec ||
-|**2-3**|`Number`|`Required`| Frequency of 2-3 m/sec ||
-|**3-4**|`Number`|`Required`| Frequency of 3-4 m/sec ||
-|**4-5**|`Number`|`Required`| Frequency of 4-5 m/sec ||
-|**5-6**|`Number`|`Required`| Frequency of 5-6 m/sec ||
-|**6-7**|`Number`|`Required`| Frequency of 6-7 m/sec ||
-|**7+**|`Number`|`Required`| Frequency of 7+ m/sec ||
-|**angle**|`String`|`Required`| Wind direction `N`, `NNE`, `NE`, `ENE`, `E`, `ESE`, `SE`, `SSE`, `S`, `SSW`, `SW`, `WSW`, `W`, `WNW`, `NW`, `NNW`  ||
-|**total**|`Number`|`Required`| Sum of frequencies of this direction ||
+|   Name    |   Type   |  Required  | Description                                                                                                       | Default |
+| :-------: | :------: | :--------: | :---------------------------------------------------------------------------------------------------------------- | :------ |
+|  **0-1**  | `Number` | `Required` | Frequency of 0-1 m/sec                                                                                            |         |
+|  **1-2**  | `Number` | `Required` | Frequency of 1-2 m/sec                                                                                            |         |
+|  **2-3**  | `Number` | `Required` | Frequency of 2-3 m/sec                                                                                            |         |
+|  **3-4**  | `Number` | `Required` | Frequency of 3-4 m/sec                                                                                            |         |
+|  **4-5**  | `Number` | `Required` | Frequency of 4-5 m/sec                                                                                            |         |
+|  **5-6**  | `Number` | `Required` | Frequency of 5-6 m/sec                                                                                            |         |
+|  **6-7**  | `Number` | `Required` | Frequency of 6-7 m/sec                                                                                            |         |
+|  **7+**   | `Number` | `Required` | Frequency of 7+ m/sec                                                                                             |         |
+| **angle** | `String` | `Required` | Wind direction `N`, `NNE`, `NE`, `ENE`, `E`, `ESE`, `SE`, `SSE`, `S`, `SSW`, `SW`, `WSW`, `W`, `WNW`, `NW`, `NNW` |         |
+| **total** | `Number` | `Required` | Sum of frequencies of this direction                                                                              |         |
 
 ### Data utils
 

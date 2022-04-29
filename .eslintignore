@@ -1,7 +1,3 @@
-!/.storybook
-/coverage
-/packages/*/node_modules
-/packages/react-cache
-**/dist
-/flow-typed/npm
-/storybook-static
+
+node_modules
+.eslintrc.js

@@ -19,72 +19,75 @@ npm i react-windrose-chart
 
 ## Usage
 
-```javascript
+```tsx
 import React from "react";
-import styled from "styled-components";
-import { WindRose } from "react-windrose-chart";
-
-const Container = styled.div`
-  width: 600px;
-  height: 600px;
-`;
+import { Chart } from "react-windrose-chart";
 
 const data = {
-  data: [
+  chartData: [
     {
       angle: "N  ",
       "0-1": 0.5,
       /* ... */
       "6-7": 0.2,
       "7+": 0.1,
-      total: 4.9
-    } /* ... */
+      total: 4.9,
+    } /* ... */,
   ],
   columns: [
     "angle",
     "0-1",
     /* ... */
     "6-7",
-    "7+"
-  ]
+    "7+",
+  ],
 };
 
 const App = () => (
-  <Container>
-    <WindRose data={data.data} columns={data.columns} />
-  </Container>
+  <div>
+    <Chart
+      chartData={data.chartData}
+      columns={data.columns}
+      responsive
+      legendGap={10}
+    />
+  </div>
 );
 ```
 
 ## Props
 
-|Name|Type|Required|Description|Default|
-|:--:|:--:|:-----:|:----------|:------|
-|**data**|`Array`|`Required`|Wind Rose Chart data||
-|**columns**|`Array`|`Required`|Wind Rose Chart header string array||
-|**width**|`Number`|| container width, default value: `500`||
-|**height**|`Number`|| container height, default value: `500`||
+|      Prop      |         Type          |  Required  | Description                                   | Default |
+| :------------: | :-------------------: | :--------: | :-------------------------------------------- | :------ |
+| **chartData**  |     `ChartData[]`     | `Required` | Wind Rose Chart data                          |         |
+|  **columns**   | `(keyof ChartData)[]` | `Required` | Wind Rose Chart header string array           |         |
+|   **width**    |       `number`        |            | container width, default value: `500`         | 500     |
+|   **height**   |       `number`        |            | container height, default value: `500`        | 500     |
+| **responsive** |       `boolean`       |            | responsive default, value: `false`            | false   |
+| **legendGap**  |       `number`        |            | width gap size in px between chart and legend | 10      |
 
-### `data` Object array
+Notice, when `responsive` is true, `width` and `height` would be ignored. chart container's aspect ratio is `1/1` and size width fit as `100%` of parent container
+
+### `chartData` Object array
 
 check [sample data](stories/data.json)
 
-|Name|Type|Required|Description|Default|
-|:--:|:--:|:-----:|:----------|:------|
-|**0-1**|`Number`|`Required`| Frequency of 0-1 m/sec ||
-|**1-2**|`Number`|`Required`| Frequency of 1-2 m/sec ||
-|**2-3**|`Number`|`Required`| Frequency of 2-3 m/sec ||
-|**3-4**|`Number`|`Required`| Frequency of 3-4 m/sec ||
-|**4-5**|`Number`|`Required`| Frequency of 4-5 m/sec ||
-|**5-6**|`Number`|`Required`| Frequency of 5-6 m/sec ||
-|**6-7**|`Number`|`Required`| Frequency of 6-7 m/sec ||
-|**7+**|`Number`|`Required`| Frequency of 7+ m/sec ||
-|**angle**|`String`|`Required`| Wind direction `N`, `NNE`, `NE`, `ENE`, `E`, `ESE`, `SE`, `SSE`, `S`, `SSW`, `SW`, `WSW`, `W`, `WNW`, `NW`, `NNW`  ||
-|**total**|`Number`|`Required`| Sum of frequencies of this direction ||
+|    Key    |   Type   |  Required  | Description                                                                                                       | Default |
+| :-------: | :------: | :--------: | :---------------------------------------------------------------------------------------------------------------- | :------ |
+|  **0-1**  | `number` | `Required` | Frequency of 0-1 m/sec                                                                                            |         |
+|  **1-2**  | `number` | `Required` | Frequency of 1-2 m/sec                                                                                            |         |
+|  **2-3**  | `number` | `Required` | Frequency of 2-3 m/sec                                                                                            |         |
+|  **3-4**  | `number` | `Required` | Frequency of 3-4 m/sec                                                                                            |         |
+|  **4-5**  | `number` | `Required` | Frequency of 4-5 m/sec                                                                                            |         |
+|  **5-6**  | `number` | `Required` | Frequency of 5-6 m/sec                                                                                            |         |
+|  **6-7**  | `number` | `Required` | Frequency of 6-7 m/sec                                                                                            |         |
+|  **7+**   | `number` | `Required` | Frequency of 7+ m/sec                                                                                             |         |
+| **angle** | `string` | `Required` | Wind direction `N`, `NNE`, `NE`, `ENE`, `E`, `ESE`, `SE`, `SSE`, `S`, `SSW`, `SW`, `WSW`, `W`, `WNW`, `NW`, `NNW` |         |
+| **total** | `number` | `Required` | Sum of frequencies of this direction                                                                              |         |
 
 ### Data utils
 
-- Wind Rose data can be converted by Wind direction(degree) and wind speed data: `{timestamp, direction, speed}` to `{data, columns}`
+- Wind Rose data can be converted by Wind direction(degree) and wind speed data: `{direction: number[], speed: number[]}` to `data: ChartData[]`
 
 ```javascript
 import { caculateWindRose } from "react-windrose-chart";
@@ -95,7 +98,35 @@ const data = {
 }
 
 const windRoseData = calculateWindRose(data);
-// Return {data, columns}
+// Return 
+// [
+//   {
+//     angle: 'N',
+//     '0-1': 0,
+//     '1-2': 0,
+//     '2-3': 0,
+//     '3-4': 0,
+//     '4-5': 0,
+//     '5-6': 0,
+//     '6-7': 0,
+//     '7+': 0,
+//     total: 0
+//   },
+//   {
+//     angle: 'NNE',
+//     '0-1': 0,
+//     '1-2': 0,
+//     '2-3': 0,
+//     '3-4': 0,
+//     '4-5': 0,
+//     '5-6': 0,
+//     '6-7': 0,
+//     '7+': 0,
+//     total: 0
+//   },
+//   ...
+// ]
+
 ```
 
 - Classifying direction function only is as:

@@ -4,7 +4,8 @@
     "outDir": "./dist",
     "module": "esnext",
     "target": "es5",
-    "lib": ["es6", "dom"],
+    "lib": ["es6", "dom", "esnext"],
+    "esModuleInterop": true,
     "sourceMap": true,
     "jsx": "react",
     "skipLibCheck": true,
@@ -20,8 +21,9 @@
     "noUnusedLocals": false,
     "declaration": true,
     "declarationMap": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true
   },
   "include": ["src"],
-  "exclude": ["dist", "node_modules", "jest"]
+  "exclude": ["dist", "node_modules", ".jest"]
 }

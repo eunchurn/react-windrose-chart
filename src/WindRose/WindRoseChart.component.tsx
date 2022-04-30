@@ -4,7 +4,6 @@ import * as d3 from "d3";
 import { AxisContainer, Axis } from "./WindRoseChart.style";
 import { ChartPropTypes, ChartDefaultProps, DataType } from "../Types";
 import { useResponsive } from "./hooks";
-// import { isNull } from "lodash";
 
 export function Chart(props: ChartPropTypes) {
   const {

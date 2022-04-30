@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  process(sourceText, sourcePath, options) {
+  process(_sourceText, sourcePath, _options) {
     return {
       code: `module.exports = ${JSON.stringify(path.basename(sourcePath))};`,
     };

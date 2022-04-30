@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/eunchurn/react-windrose-chart/compare/v0.2.1...v0.2.2) (2022-04-30)
+
+
+### Bug Fixes
+
+* **ci:** npmpublish ([aa861f1](https://github.com/eunchurn/react-windrose-chart/commit/aa861f1a28df4d73cd47c95359978d2c13da877d))
+
 ### 0.2.1 (2022-04-30)
 
 

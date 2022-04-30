@@ -1,24 +1,51 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from "react";
 import * as d3 from "d3";
 import { AxisContainer, Axis } from "./WindRoseChart.style";
 import { ChartPropTypes, ChartDefaultProps, DataType } from "../Types";
+import { useResponsive } from "./hooks";
 // import { isNull } from "lodash";
 
 export function Chart(props: ChartPropTypes) {
+  const {
+    width: propWidth,
+    height: propHeight,
+    chartData: data,
+    columns,
+    responsive,
+    legendGap,
+  } = props;
   const containerRef = React.useRef<SVGSVGElement>(null);
   const axisContainerRef = React.useRef<HTMLDivElement>(null);
-  const { width, height, chartData: data, columns } = props;
+  const containerSize = useResponsive(axisContainerRef, {
+    width: propWidth,
+    height: propHeight,
+  });
 
+  const [size, setSize] = React.useState({
+    width: propWidth,
+    height: propHeight,
+  });
+  React.useEffect(() => {
+    const { width, height } = containerSize;
+    if (responsive) {
+      const rect = Math.min(width, height);
+      setSize({ width: rect, height: rect });
+    } else {
+      setSize({ width: propWidth, height: propHeight });
+    }
+  }, [responsive, axisContainerRef, containerSize.width]);
   React.useEffect(() => {
     const { current } = containerRef;
     if (current === null) return;
+    const { width, height } = size;
     const svg = d3.select(containerRef.current);
     svg.selectAll("*").remove();
     const margin = { top: 40, right: 80, bottom: 40, left: 40 };
     const innerRadius = 20;
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
-    const outerRadius = Math.min(chartWidth, chartHeight) / 2.4;
+    const outerRadius = Math.min(chartWidth, chartHeight) / 2.4 - legendGap / 2;
     const g = svg
       .append("g")
       .attr("transform", `translate(${width / 2},${height / 2})`);
@@ -29,10 +56,10 @@ export function Chart(props: ChartPropTypes) {
       .scaleBand()
       .range([0, 2 * Math.PI])
       .align(0);
-    const xGroup = d3
-      .scaleBand()
-      .range([0, 2 * Math.PI])
-      .align(0);
+    // const xGroup = d3
+    //   .scaleBand()
+    //   .range([0, 2 * Math.PI])
+    //   .align(0);
     const y = d3
       .scaleLinear() // you can try scaleRadial but it scales differently
       .range([innerRadius, outerRadius]);
@@ -61,7 +88,8 @@ export function Chart(props: ChartPropTypes) {
 
     // Extend the domain slightly to match the range of [0, 2π].
     angle.domain([0, d3.max(data, (_, i): number => i + 1) || 0]);
-    radius.domain([0, d3.max(data, () => 0) || 0]);
+    radius.domain([0, d3.max(data, (): number => 0) || 0]);
+    // radius.domain([innerRadius, outerRadius]);
     const angleOffset = -360.0 / data.length / 2.0;
     const stackGen: d3.Stack<any, DataType, string> = d3
       .stack()
@@ -124,7 +152,7 @@ export function Chart(props: ChartPropTypes) {
         // @ts-ignore
         (x(d.angle) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI < Math.PI)
           ? "rotate(90)translate(0,16)"
-          : "rotate(-90)translate(0,-9)"
+          : "rotate(-90)translate(0,-9)",
       )
       .attr("transform", "rotate(90)translate(0,-9)")
       .text((d) => d.angle)
@@ -139,7 +167,7 @@ export function Chart(props: ChartPropTypes) {
         d3
           // @ts-ignore
           .axisLeft()
-          .scale(radius.copy().range([-innerRadius, -(outerRadius + 10)]))
+          .scale(radius.copy().range([-innerRadius, -(outerRadius + 10)])),
       );
     const yAxis = g.append("g").attr("text-anchor", "middle");
     const yTick = yAxis
@@ -169,9 +197,9 @@ export function Chart(props: ChartPropTypes) {
       .attr(
         "transform",
         (d, i) =>
-          `translate(${outerRadius + 45},${
+          `translate(${outerRadius + 45 + legendGap / 2},${
             -outerRadius + 40 + (i - (columns.length - 1) / 2) * 20
-          })`
+          })`,
       );
     legend
       .append("rect")
@@ -187,10 +215,15 @@ export function Chart(props: ChartPropTypes) {
       .text((d) => d)
       .style("font-size", 12);
     g.exit().remove();
-  }, []);
+  }, [containerSize.width]);
   return (
     <AxisContainer ref={axisContainerRef}>
-      <Axis className="axis" width={width} height={height} ref={containerRef} />
+      <Axis
+        className="axis"
+        width={size.width}
+        height={size.height}
+        ref={containerRef}
+      />
     </AxisContainer>
   );
 }

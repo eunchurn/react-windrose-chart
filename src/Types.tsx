@@ -121,6 +121,8 @@ export interface ChartPropTypes extends React.HTMLProps<HTMLDivElement> {
   columns: string[];
   width: number;
   height: number;
+  responsive: boolean;
+  legendGap: number;
 }
 
 export const ChartDefaultProps: ChartPropTypes = {
@@ -321,6 +323,8 @@ export const ChartDefaultProps: ChartPropTypes = {
     },
   ],
   columns: ["angle", "0-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7+"],
+  responsive: false,
+  legendGap: 10,
 };
 
 export interface DataType {

@@ -1,4 +1,4 @@
-import { ChartPropTypes, ChartDefaultProps, DataType, CountClassify, Direction, Count } from "../Types";
+import { Direction, Count, ChartData } from "../Types";
 
 const countPush = (count: Count, dir: Direction, speed: number) => {
   if (speed < 1) {
@@ -18,16 +18,16 @@ const countPush = (count: Count, dir: Direction, speed: number) => {
   }
 };
 
-const CountClassify = {
-  "0-1": "0-1",
-  "1-2": "1-2",
-  "2-3": "2-3",
-  "3-4": "3-4",
-  "4-5": "4-5",
-  "5-6": "5-6",
-  "6-7": "6-7",
-  "7+": "7+",
-};
+// const CountClassify = {
+//   "0-1": "0-1",
+//   "1-2": "1-2",
+//   "2-3": "2-3",
+//   "3-4": "3-4",
+//   "4-5": "4-5",
+//   "5-6": "5-6",
+//   "6-7": "6-7",
+//   "7+": "7+",
+// };
 
 // type DirectionCount = {
 //   "0-1": number;
@@ -128,7 +128,7 @@ type Data = {
   speed: number[];
 };
 
-export const calculateWindRose = (data: Data) => {
+export function calculateWindRose(data: Data): ChartData[] {
   const count: Count = {
     N: {
       "0-1": 0,
@@ -315,7 +315,7 @@ export const calculateWindRose = (data: Data) => {
       angle: key,
       ...obj,
       total,
-    };
+    } as ChartData;
   });
   return ret;
-};
+}

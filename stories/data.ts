@@ -2,7 +2,7 @@ import { ChartPropTypes } from "../src/Types";
 export const data: ChartPropTypes = {
   chartData: [
     {
-      "angle": "N",
+      angle: "N",
       "0-1": 0.5,
       "1-2": 1.6,
       "2-3": 0.9,
@@ -11,10 +11,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.3,
       "6-7": 0.2,
       "7+": 0.1,
-      "total": 4.8999999999999995
+      total: 4.8999999999999995,
     },
     {
-      "angle": "NNE",
+      angle: "NNE",
       "0-1": 0.6,
       "1-2": 1.8,
       "2-3": 1.3,
@@ -23,10 +23,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.3,
       "6-7": 0.1,
       "7+": 0.1,
-      "total": 5.499999999999999
+      total: 5.499999999999999,
     },
     {
-      "angle": "NE",
+      angle: "NE",
       "0-1": 0.5,
       "1-2": 1.5,
       "2-3": 1.6,
@@ -35,10 +35,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.6,
       "6-7": 0.1,
       "7+": 0.1,
-      "total": 6.799999999999999
+      total: 6.799999999999999,
     },
     {
-      "angle": "ENE",
+      angle: "ENE",
       "0-1": 0.4,
       "1-2": 1.6,
       "2-3": 0.9,
@@ -47,10 +47,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.2,
       "6-7": 0.1,
       "7+": 0.1,
-      "total": 4.8
+      total: 4.8,
     },
     {
-      "angle": "E",
+      angle: "E",
       "0-1": 0.4,
       "1-2": 1.6,
       "2-3": 1,
@@ -59,10 +59,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.1,
       "6-7": 0.1,
       "7+": 0.1,
-      "total": 4.499999999999999
+      total: 4.499999999999999,
     },
     {
-      "angle": "ESE",
+      angle: "ESE",
       "0-1": 0.3,
       "1-2": 1.2,
       "2-3": 0.6,
@@ -71,10 +71,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.1,
       "6-7": 0.1,
       "7+": 0.05,
-      "total": 2.95
+      total: 2.95,
     },
     {
-      "angle": "SE",
+      angle: "SE",
       "0-1": 0.4,
       "1-2": 1.5,
       "2-3": 0.6,
@@ -83,10 +83,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.05,
       "6-7": 0.05,
       "7+": 0.05,
-      "total": 3.5499999999999994
+      total: 3.5499999999999994,
     },
     {
-      "angle": "SSE",
+      angle: "SSE",
       "0-1": 0.4,
       "1-2": 1.7,
       "2-3": 0.9,
@@ -95,10 +95,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.1,
       "6-7": 0.05,
       "7+": 0.05,
-      "total": 4.1
+      total: 4.1,
     },
     {
-      "angle": "S",
+      angle: "S",
       "0-1": 0.6,
       "1-2": 2.2,
       "2-3": 1.4,
@@ -107,10 +107,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.1,
       "6-7": 0.1,
       "7+": 0.05,
-      "total": 5.949999999999999
+      total: 5.949999999999999,
     },
     {
-      "angle": "SSW",
+      angle: "SSW",
       "0-1": 0.4,
       "1-2": 2,
       "2-3": 1.7,
@@ -119,10 +119,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.2,
       "6-7": 0.05,
       "7+": 0.1,
-      "total": 5.949999999999999
+      total: 5.949999999999999,
     },
     {
-      "angle": "SW",
+      angle: "SW",
       "0-1": 0.5,
       "1-2": 2.3,
       "2-3": 1.9,
@@ -131,10 +131,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.3,
       "6-7": 0.2,
       "7+": 0.1,
-      "total": 7.299999999999999
+      total: 7.299999999999999,
     },
     {
-      "angle": "WSW",
+      angle: "WSW",
       "0-1": 0.6,
       "1-2": 2.4,
       "2-3": 2.2,
@@ -143,10 +143,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.4,
       "6-7": 0.2,
       "7+": 0.1,
-      "total": 7.800000000000001
+      total: 7.800000000000001,
     },
     {
-      "angle": "W",
+      angle: "W",
       "0-1": 0.6,
       "1-2": 2.3,
       "2-3": 1.8,
@@ -155,10 +155,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.9,
       "6-7": 0.4,
       "7+": 0.9,
-      "total": 9.000000000000002
+      total: 9.000000000000002,
     },
     {
-      "angle": "WNW",
+      angle: "WNW",
       "0-1": 0.5,
       "1-2": 2.6,
       "2-3": 1.7,
@@ -167,10 +167,10 @@ export const data: ChartPropTypes = {
       "5-6": 0.9,
       "6-7": 0.7,
       "7+": 2.2,
-      "total": 10.8
+      total: 10.8,
     },
     {
-      "angle": "NW",
+      angle: "NW",
       "0-1": 0.4,
       "1-2": 2.3,
       "2-3": 1.8,
@@ -179,7 +179,7 @@ export const data: ChartPropTypes = {
       "5-6": 0.9,
       "6-7": 0.7,
       "7+": 1.5,
-      "total": 9.9
+      total: 9.9,
     },
     {
       angle: "NNW",
@@ -191,12 +191,12 @@ export const data: ChartPropTypes = {
       "5-6": 0.3,
       "6-7": 0.4,
       "7+": 0.2,
-      total: 4.300000000000001
-    }
+      total: 4.300000000000001,
+    },
   ],
   columns: ["angle", "0-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7+"],
   width: 600,
   height: 600,
   responsive: false,
   legendGap: 10,
-}
+};

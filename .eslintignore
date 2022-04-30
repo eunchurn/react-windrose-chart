@@ -1,3 +1,7 @@
-
 node_modules
+dist
 .eslintrc.js
+transformers
+rollup.config.common.ts
+rollup.config.dev.ts
+rollup.config.prod.ts

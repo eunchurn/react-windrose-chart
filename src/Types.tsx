@@ -21,23 +21,23 @@ export type CountClassify =
   | "7+";
 
 export enum Direction {
-  N= "N",
-  NNE= "NNE",
-  NE= "NE",
-  ENE= "ENE",
-  E= "E",
-  ESE= "ESE",
-  SE= "SE",
-  SSE= "SEE",
-  S= "S",
-  SSW= "SSW",
-  SW= "SW",
-  WSW= "WSW",
-  W= "W",
-  WNW= "WNW",
-  NW= "NW",
-  NNW= "NNW",
-};
+  N = "N",
+  NNE = "NNE",
+  NE = "NE",
+  ENE = "ENE",
+  E = "E",
+  ESE = "ESE",
+  SE = "SE",
+  SSE = "SEE",
+  S = "S",
+  SSW = "SSW",
+  SW = "SW",
+  WSW = "WSW",
+  W = "W",
+  WNW = "WNW",
+  NW = "NW",
+  NNW = "NNW",
+}
 
 export type Count = {
   N: DirectionCount;
@@ -113,6 +113,8 @@ export type ChartData = {
   "7+": number;
   total: number;
 };
+
+export type Column = keyof ChartData;
 
 export interface ChartPropTypes extends React.HTMLProps<HTMLDivElement> {
   // data: DirectionCount & { angle: Direction; total: number }[];

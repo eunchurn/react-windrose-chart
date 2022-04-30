@@ -57,14 +57,14 @@ const App = () => (
 
 ## Props
 
-|    Name         |   Type    |  Required  | Description                                      | Default |
-| :-------------: | :-------: | :--------: | :----------------------------------------------- | :------ |
-|**chartData**    | `array`   | `Required` | Wind Rose Chart data                             |         |
-| **columns**     | `array`   | `Required` | Wind Rose Chart header string array              |         |
-|  **width**      | `number`  |            | container width, default value: `500`            |  500    |
-| **height**      | `number`  |            | container height, default value: `500`           |  500    |
-| **responsive**  | `boolean` |            | responsive default, value: `false`               |  false  |
-| **legendGap**   | `number`  |            | width gap size in px between chart and legend    |  10     |
+|      Prop      |         Type          |  Required  | Description                                   | Default |
+| :------------: | :-------------------: | :--------: | :-------------------------------------------- | :------ |
+| **chartData**  |     `ChartData[]`     | `Required` | Wind Rose Chart data                          |         |
+|  **columns**   | `(keyof ChartData)[]` | `Required` | Wind Rose Chart header string array           |         |
+|   **width**    |       `number`        |            | container width, default value: `500`         | 500     |
+|   **height**   |       `number`        |            | container height, default value: `500`        | 500     |
+| **responsive** |       `boolean`       |            | responsive default, value: `false`            | false   |
+| **legendGap**  |       `number`        |            | width gap size in px between chart and legend | 10      |
 
 Notice, when `responsive` is true, `width` and `height` would be ignored. chart container's aspect ratio is `1/1` and size width fit as `100%` of parent container
 
@@ -72,7 +72,7 @@ Notice, when `responsive` is true, `width` and `height` would be ignored. chart 
 
 check [sample data](stories/data.json)
 
-|   Name    |   Type   |  Required  | Description                                                                                                       | Default |
+|    Key    |   Type   |  Required  | Description                                                                                                       | Default |
 | :-------: | :------: | :--------: | :---------------------------------------------------------------------------------------------------------------- | :------ |
 |  **0-1**  | `number` | `Required` | Frequency of 0-1 m/sec                                                                                            |         |
 |  **1-2**  | `number` | `Required` | Frequency of 1-2 m/sec                                                                                            |         |
@@ -87,7 +87,7 @@ check [sample data](stories/data.json)
 
 ### Data utils
 
-- Wind Rose data can be converted by Wind direction(degree) and wind speed data: `{timestamp, direction, speed}` to `{data, columns}`
+- Wind Rose data can be converted by Wind direction(degree) and wind speed data: `{direction: number[], speed: number[]}` to `data: ChartData[]`
 
 ```javascript
 import { caculateWindRose } from "react-windrose-chart";
@@ -98,7 +98,35 @@ const data = {
 }
 
 const windRoseData = calculateWindRose(data);
-// Return {data, columns}
+// Return 
+// [
+//   {
+//     angle: 'N',
+//     '0-1': 0,
+//     '1-2': 0,
+//     '2-3': 0,
+//     '3-4': 0,
+//     '4-5': 0,
+//     '5-6': 0,
+//     '6-7': 0,
+//     '7+': 0,
+//     total: 0
+//   },
+//   {
+//     angle: 'NNE',
+//     '0-1': 0,
+//     '1-2': 0,
+//     '2-3': 0,
+//     '3-4': 0,
+//     '4-5': 0,
+//     '5-6': 0,
+//     '6-7': 0,
+//     '7+': 0,
+//     total: 0
+//   },
+//   ...
+// ]
+
 ```
 
 - Classifying direction function only is as:

@@ -1,22 +1,21 @@
 // import "jest-styled-components";
 
 import React from "react";
-// import { isPortal, isFragment } from "react-is";
+import { isPortal, isFragment } from "react-is";
 import { mount } from "enzyme";
 
-import {Chart} from "../WindRoseChart.component";
+import { Chart } from "../WindRoseChart.component";
 
 describe("component <Chart />", () => {
   it("should render correctly", () => {
-    // mount(<Chart />);
-    expect(true).toBe(true)
+    mount(<Chart />);
   });
 
-  // it("is not type Portal", () => {
-  //   expect(isPortal(<Chart />)).toBeFalsy();
-  // });
+  it("is not type Portal", () => {
+    expect(isPortal(<Chart />)).toBeFalsy();
+  });
 
-  // it("is not type Fragment", () => {
-  //   expect(isFragment(<Chart />)).toBeFalsy();
-  // });
+  it("is not type Fragment", () => {
+    expect(isFragment(<Chart />)).toBeFalsy();
+  });
 });

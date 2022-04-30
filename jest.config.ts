@@ -1,4 +1,7 @@
-import { pathsToModuleNameMapper, GlobalConfigTsJest } from "ts-jest";
+import {
+  // pathsToModuleNameMapper,
+  GlobalConfigTsJest,
+} from "ts-jest";
 import type { InitialOptionsTsJest } from "ts-jest/dist/types";
 // import ts from "typescript";
 
@@ -48,8 +51,9 @@ const jestSetting: InitialOptionsTsJest = {
     "^.+\\.tsx?$": "ts-jest",
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
       "<rootDir>/transformers/fileTransformer.js",
-    // "\\.(css|less)$": "<rootDir>/transformers/styleTransformer.js",
+    "\\.(css|less)$": "<rootDir>/transformers/styleTransformer.js",
   },
+  transformIgnorePatterns: ["<rootDir>/node_modules/"],
   collectCoverageFrom: [
     "(src|packages)/**/*.ts",
     "!**/(index|*.stories|stories).ts",

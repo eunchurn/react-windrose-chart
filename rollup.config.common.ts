@@ -3,7 +3,7 @@ import path from "path";
 import minimatch from "minimatch";
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
-import typescript from '@rollup/plugin-typescript'
+import typescript from "@rollup/plugin-typescript";
 
 const ROOT_RESOLVE = path.resolve();
 
@@ -33,7 +33,7 @@ const config = {
     commonjs({
       include: "node_modules/**",
     }),
-    typescript()
+    typescript(),
     // babel({
     //   exclude: "node_modules/**",
     // }),

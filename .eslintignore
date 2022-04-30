@@ -1,7 +1,7 @@
-!/.storybook
-/coverage
-/packages/*/node_modules
-/packages/react-cache
-**/dist
-/flow-typed/npm
-/storybook-static
+node_modules
+dist
+.eslintrc.js
+transformers
+rollup.config.common.ts
+rollup.config.dev.ts
+rollup.config.prod.ts

@@ -61,21 +61,16 @@ jobs:
       - name: Build
         run: |
           yarn build
-      - uses: mmarchini-oss/npm-otp-publish@v0
-        with:
-          npm_token: ${{ secrets.NPM_AUTH_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          github_actor: ${{ github.actor }}
-      # - name: "Publish to Node Package Manager"
-      #   run: |
-      #     npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-      #     npm config set scope "@eunchurn"
-      #     npm config list
-      #     echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
-      #     npm publish --access public
-      #   env:
-      #     CI: true
-      #     NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+      - name: "Publish to Node Package Manager"
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "@eunchurn"
+          npm config list
+          echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
+          npm publish --access public
+        env:
+          CI: true
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
   publish-gpr:
     needs: build

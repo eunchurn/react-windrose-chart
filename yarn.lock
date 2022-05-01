@@ -1688,9 +1688,9 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-actions@^6.4.22":
+"@storybook/addon-actions@6.4.22":
   version "6.4.22"
-  resolved "https://registry.npmjs.org/@storybook/addon-actions/-/addon-actions-6.4.22.tgz#ec1b4332e76a8021dc0a1375dfd71a0760457588"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.4.22.tgz#ec1b4332e76a8021dc0a1375dfd71a0760457588"
   integrity sha512-t2w3iLXFul+R/1ekYxIEzUOZZmvEa7EzUAVAuCHP4i6x0jBnTTZ7sAIUVRaxVREPguH5IqI/2OklYhKanty2Yw==
   dependencies:
     "@storybook/addons" "6.4.22"
@@ -1712,9 +1712,9 @@
     util-deprecate "^1.0.2"
     uuid-browser "^3.1.0"
 
-"@storybook/addon-console@^1.2.3":
+"@storybook/addon-console@1.2.3":
   version "1.2.3"
-  resolved "https://registry.npmjs.org/@storybook/addon-console/-/addon-console-1.2.3.tgz#f6c88a8f54fe00c8de9b77720eaef2bc1daa3af1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-console/-/addon-console-1.2.3.tgz#f6c88a8f54fe00c8de9b77720eaef2bc1daa3af1"
   integrity sha512-w5uCUwECA28fdZWoa+A4e/RS9XzBStdd3TwwmpSM5m4fjURJI7Qr+uVq30UeRdgZRH1K7CdWzYUE6RxWXMdVyw==
   dependencies:
     global "^4.3.2"
@@ -6771,9 +6771,9 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.npmjs.org/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-gh-pages@^3.2.3:
+gh-pages@3.2.3:
   version "3.2.3"
-  resolved "https://registry.npmjs.org/gh-pages/-/gh-pages-3.2.3.tgz#897e5f15e111f42af57d21d430b83e5cdf29472c"
+  resolved "https://registry.yarnpkg.com/gh-pages/-/gh-pages-3.2.3.tgz#897e5f15e111f42af57d21d430b83e5cdf29472c"
   integrity sha512-jA1PbapQ1jqzacECfjUaO9gV8uBgU6XNMV0oXLtfCX3haGLe5Atq8BxlrADhbD6/UdG9j6tZLWAkAybndOXTJg==
   dependencies:
     async "^2.6.1"
@@ -11209,9 +11209,9 @@ stackframe@^1.1.1:
   resolved "https://registry.npmjs.org/stackframe/-/stackframe-1.2.1.tgz#1033a3473ee67f08e2f2fc8eba6aef4f845124e1"
   integrity sha512-h88QkzREN/hy8eRdyNhhsO7RSJ5oyTqxxmmn0dzBIMUclZsjpfmrsg81vp8mjjAs2vAZ72nyWxRUwSwmh0e4xg==
 
-standard-version@^9.3.2:
+standard-version@9.3.2:
   version "9.3.2"
-  resolved "https://registry.npmjs.org/standard-version/-/standard-version-9.3.2.tgz#28db8c1be66fd2d736f28f7c5de7619e64cd6dab"
+  resolved "https://registry.yarnpkg.com/standard-version/-/standard-version-9.3.2.tgz#28db8c1be66fd2d736f28f7c5de7619e64cd6dab"
   integrity sha512-u1rfKP4o4ew7Yjbfycv80aNMN2feTiqseAhUhrrx2XtdQGmu7gucpziXe68Z4YfHVqlxVEzo4aUA0Iu3VQOTgQ==
   dependencies:
     chalk "^2.4.2"

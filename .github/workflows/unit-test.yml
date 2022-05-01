@@ -27,7 +27,7 @@ jobs:
             ${{ runner.OS }}-
       - name: Install dependencies
         run: |
-          yarn
+          yarn --prefer-offline
       - name: Type Check
         run: |
           yarn typecheck

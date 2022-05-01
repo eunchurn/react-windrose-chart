@@ -12,9 +12,24 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: yarn
-      - run: yarn test
-      - run: yarn build
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys:
+            |
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      - name: Install dependencies
+        run: |
+          yarn --prefer-offline
+      - name: Type Check
+        run: |
+          yarn typecheck
+      - name: Unit Test
+        run: |
+          yarn test
 
   publish-npm:
     needs: build
@@ -25,17 +40,42 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - name: "Publish to Node Package Manager"
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys:
+            |
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      - name: Install dependencies
         run: |
-          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-          npm config set scope "@eunchurn"
-          npm config list
-          echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
-          npm publish --access public
-        env:
-          CI: true
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+          yarn --prefer-offline
+      - name: Type Check
+        run: |
+          yarn typecheck
+      - name: Unit Test
+        run: |
+          yarn test
+      - name: Build
+        run: |
+          yarn build
+      - uses: mmarchini-oss/npm-otp-publish@v0
+        with:
+          npm_token: ${{ secrets.NPM_AUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_actor: ${{ github.actor }}
+      # - name: "Publish to Node Package Manager"
+      #   run: |
+      #     npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+      #     npm config set scope "@eunchurn"
+      #     npm config list
+      #     echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
+      #     npm publish --access public
+      #   env:
+      #     CI: true
+      #     NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
   publish-gpr:
     needs: build
@@ -51,7 +91,27 @@ jobs:
           scope: '@eunchurn'
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: yarn
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys:
+            |
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      - name: Install dependencies
+        run: |
+          yarn --prefer-offline
+      - name: Type Check
+        run: |
+          yarn typecheck
+      - name: Unit Test
+        run: |
+          yarn test
+      - name: Build
+        run: |
+          yarn build
       - name: "Publish to Github Package Registry"
         run: |
           echo "registry=https://npm.pkg.github.com/eunchurn" >> ~/.npmrc

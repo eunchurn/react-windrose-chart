@@ -50,7 +50,7 @@
   "devDependencies": {
     "@eunchurn/eslint-config": "0.1.8",
     "@eunchurn/prettier-config": "0.0.2",
-    "@rollup/plugin-node-resolve": "13.2.1",
+    "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-typescript": "8.3.2",
     "@storybook/addon-actions": "6.4.22",
     "@storybook/addon-console": "1.2.3",

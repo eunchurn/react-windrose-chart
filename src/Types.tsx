@@ -28,7 +28,7 @@ export enum Direction {
   E = "E",
   ESE = "ESE",
   SE = "SE",
-  SSE = "SEE",
+  SSE = "SSE",
   S = "S",
   SSW = "SSW",
   SW = "SW",

@@ -13,8 +13,8 @@ storiesOf("Components", module).add("WindRose", () => (
       columns={data.columns}
       width={1000}
       height={1000}
-      // responsive
-      // legendGap={0}
+      responsive
+      legendGap={10}
     />
   </App>
 ));

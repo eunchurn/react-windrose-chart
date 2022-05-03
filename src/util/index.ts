@@ -1,6 +1,6 @@
 import { Direction, Count, ChartData } from "../Types";
 
-const countPush = (count: Count, dir: Direction, speed: number) => {
+export const countPush = (count: Count, dir: Direction, speed: number) => {
   if (speed < 1) {
     count[dir]["0-1"] = count[dir]["0-1"] + 1;
   } else if (speed < 2) {
@@ -16,6 +16,7 @@ const countPush = (count: Count, dir: Direction, speed: number) => {
   } else {
     count[dir]["7+"] = count[dir]["7+"] + 1;
   }
+  return count;
 };
 
 export const classifyDir = (direction: number): Direction => {

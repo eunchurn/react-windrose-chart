@@ -31,12 +31,12 @@ const jestSetting: InitialOptionsTsJest = {
     "<rootDir>/node_modules/",
     "/node_modules/(?!d3|d3-array|internmap|delaunator|robust-predicates)",
   ],
-  collectCoverageFrom: [
-    "(src|packages)/**/*.ts",
-    "!**/(index|*.stories|stories).ts",
-    "!**/dist/**/*",
-    "!packages/react-cache/**/*",
-  ],
+  // collectCoverageFrom: [
+  //   "(src|packages)/**/*.ts",
+  //   "!**/(index|*.stories|stories).ts",
+  //   "!**/dist/**/*",
+  //   "!packages/react-cache/**/*",
+  // ],
 };
 
 export default jestSetting;

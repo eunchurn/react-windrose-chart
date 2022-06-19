@@ -1209,10 +1209,10 @@
     eslint-plugin-prettier "^4.0.0"
     prettier "^2.6.0"
 
-"@eunchurn/prettier-config@0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@eunchurn/prettier-config/-/prettier-config-0.0.2.tgz#59b5e004c6518a0afd38d484096f5c04cd05fc2d"
-  integrity sha512-QdIpSF+QppsrwrVcSRtlgtvyJWflHqmEKOIhr52gBhyiX64Xn54p5t3HWPqz/JOVcdJcwzmi5mzK9HD/HEA3Cg==
+"@eunchurn/prettier-config@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@eunchurn/prettier-config/-/prettier-config-0.0.4.tgz#7337d00fed4c3f1d1f6c1d04c98838d468ff4be1"
+  integrity sha512-ljUFpHLSq0jr4Hs+D7s5Aam2t8Px/xymiBvl7OiAxAWFz0xVAJM90tP8WVBHHrsb9b5cuH+LqarXL5N++SHtHA==
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"

@@ -1214,10 +1214,12 @@
     eslint-plugin-prettier "4.2.1"
     prettier "2.8.2"
 
-"@eunchurn/prettier-config@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@eunchurn/prettier-config/-/prettier-config-0.0.4.tgz#7337d00fed4c3f1d1f6c1d04c98838d468ff4be1"
-  integrity sha512-ljUFpHLSq0jr4Hs+D7s5Aam2t8Px/xymiBvl7OiAxAWFz0xVAJM90tP8WVBHHrsb9b5cuH+LqarXL5N++SHtHA==
+"@eunchurn/prettier-config@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@eunchurn/prettier-config/-/prettier-config-0.0.5.tgz#a3e4be4ec3d961b6b8858ea216045f1120d463fa"
+  integrity sha512-kGPxdNvRDFR1ypnq4wpZ2Wja0b0Cxri5adVHdDajDto4p1e88gnTATDK9+i2MloR5sie2YJ8zBp4XXuxzO+W1A==
+  dependencies:
+    prettier "^2.8.2"
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"
@@ -10101,7 +10103,7 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@2.8.2:
+prettier@2.8.2, prettier@^2.8.2:
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.2.tgz#c4ea1b5b454d7c4b59966db2e06ed7eec5dfd160"
   integrity sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==

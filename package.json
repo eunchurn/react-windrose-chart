@@ -102,7 +102,7 @@
   },
   "resolutions": {
     "prismjs": "^1.27.0",
-    "node-fetch": "2.6.7",
+    "node-fetch": "2.6.8",
     "trim": "^1.0.0",
     "glob-parent": "^6.0.0",
     "highlight.js": "^11.0.0"

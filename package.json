@@ -48,7 +48,7 @@
     "release": "standard-version"
   },
   "devDependencies": {
-    "@eunchurn/eslint-config": "0.1.12",
+    "@eunchurn/eslint-config": "0.1.13",
     "@eunchurn/prettier-config": "0.0.5",
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-typescript": "10.0.1",

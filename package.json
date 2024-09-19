@@ -51,7 +51,7 @@
     "@eunchurn/eslint-config": "0.1.13",
     "@eunchurn/prettier-config": "0.0.6",
     "@rollup/plugin-node-resolve": "15.2.3",
-    "@rollup/plugin-typescript": "10.0.1",
+    "@rollup/plugin-typescript": "11.1.6",
     "@storybook/addon-actions": "6.5.16",
     "@storybook/addon-console": "1.2.3",
     "@storybook/addon-links": "6.5.16",

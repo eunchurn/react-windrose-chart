@@ -1,5 +1,7 @@
 # Windrose Chart Component
 
+## [DEPRECATED] This package has been deprecated. Please use https://github.com/eunchurn/components/tree/main/packages/react-windrose instead.
+
 ![Node.js Package](https://github.com/eunchurn/react-windrose-chart/workflows/Node.js%20Package/badge.svg?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/eunchurn/react-windrose-chart.svg)](https://greenkeeper.io/) ![npm](https://img.shields.io/npm/dw/react-windrose-chart) [![codecov](https://codecov.io/gh/eunchurn/react-windrose-chart/branch/master/graph/badge.svg)](https://codecov.io/gh/eunchurn/react-windrose-chart) ![NPM](https://img.shields.io/npm/l/react-windrose-chart) [![npm version](https://badge.fury.io/js/react-windrose-chart.svg)](https://badge.fury.io/js/react-windrose-chart) [![GitHub Package Registry version](https://img.shields.io/github/v/release/eunchurn/react-windrose-chart.svg?label=GPR&logo=github)](https://github.com/eunchurn/react-windrose-chart/packages/54428) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [**Storybook**](https://eunchurn.github.io/react-windrose-chart/)

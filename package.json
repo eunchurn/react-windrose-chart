@@ -86,7 +86,7 @@
     "rollup-plugin-node-resolve": "5.2.0",
     "@rollup/plugin-terser": "0.4.4",
     "source-map-loader": "4.0.2",
-    "standard-version": "9.5.0",
+    "commit-and-tag-version": "9.5.0",
     "styled-components": "5.3.9",
     "ts-jest": "28.0.8",
     "ts-node": "10.9.2",
